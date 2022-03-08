@@ -1,9 +1,16 @@
 const express = require("express");
 const app = express();
 const port = 5500;
+const path = require("path");
+const bodyparser = require("Body-parser");
+const ruta = path.join(__filename, '../index.html');
 
-app.get("/my-handling-form-page", (req, res) => {
-    res.send(req.params.name);
+app.get("/page", (req, res) => {
+    res.sendFile(ruta);
+});
+
+app.post("/page/tunombre", (req, res) => {
+    res.send();
 });
 
 app.listen(port, () => {
