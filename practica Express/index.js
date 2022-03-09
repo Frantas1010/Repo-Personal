@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 5500;
+const port = 3000;
 const path = require("path");
 const bodyparser = require("Body-parser");
 const ruta = path.join(__filename, '../index.html');
@@ -10,7 +10,7 @@ app.get("/page", (req, res) => {
 });
 
 app.post("/page/tunombre", (req, res) => {
-    res.send();
+    res.send(req);
 });
 
 app.listen(port, () => {
