@@ -9,29 +9,15 @@
 </head>
 
 <body>
-    <form action="/page/tunombre" method="post">
-        <ul>
-            <div class="row-12 justify-content-center">
-                <div class="col">   
-                    <li>
-                        <label for="name">Nombre:</label> <br>
-                        <input type="text" name="user_name" />
-                    </li>
-                </div>
-            </div>
-            <div class="row-12">
-                <div class="col">
-                    <li>
-                        <label for="name2">Apellido:</label> <br>
-                        <input type="text" name="user_name2" />
-                    </li>
-                </div>
-            </div>
-            <div class="row-12">   
-                <div class="col">  
-                    <button class="btn btn-info btn-outline-dark" type="submit">Enviar Formulario</button>
-                </div>  
-            </div>
+    <form class="form-inline" action="/page/tunombre" method="post">
+        <ul> 
+            <li>
+                <input type="text" name="user_name" placeholder="Nombre"/>
+            </li>
+            <li>
+                <input type="text" name="user_name2" placeholder="Apellido"/>
+            </li>
+                <button class="btn btn-info btn-outline-dark" type="submit">Enviar Formulario</button>
         </ul>
     </form>
 </body>
