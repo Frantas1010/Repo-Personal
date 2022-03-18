@@ -1,14 +1,13 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const path = require("path");
-const ruta = path.join(__dirname, "./index.html");
+const ruta = __dirname + "/index.html";
 const bodyparser = require("body-parser");
 const ejs = require("ejs");
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.set("view engine", "ejs");
-app.set("views", __dirname + "/vistas");
+app.set("views", "./vistas");
 
 app.get("/", (req, res) => {
     res.sendFile(ruta);
