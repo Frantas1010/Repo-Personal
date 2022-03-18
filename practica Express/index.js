@@ -2,19 +2,26 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const path = require("path");
+const ruta = path.join(__dirname, "./index.html");
 const bodyparser = require("body-parser");
-const ruta = path.join(__filename, '../index.html');
-app.use(bodyparser.urlencoded({extended:false}));
+const ejs = require("ejs");
+app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
+app.set("view engine", "ejs");
+app.set("views", __dirname + "/vistas");
 
-app.get("/page", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(ruta);
 });
 
-app.post("/page/tunombre", (req, res) => {
-    res.send("hola " + req.body.user_name + " " + req.body.user_name2);
+app.post("/tunombre", (req, res) => {
+    res.render("vista1", {
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        fecha: req.body.fecha,
+    });
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`listening on port ${port}`);
 });
