@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
     res.sendFile(ruta);
 });
 
+/*
 app.post("/tunombre", (req, res) => {
     res.render("vista1", {
         nombre: req.body.nombre,
@@ -20,6 +21,7 @@ app.post("/tunombre", (req, res) => {
         fecha: req.body.fecha,
     });
 });
+*/
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`);

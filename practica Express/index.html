@@ -14,35 +14,17 @@
     </head>
     <body class="bg-dark">
         <form action="/tunombre" method="post" style="margin-top: 100px">
-            <div class="col-6 container">
-                <input
-                    name="nombre"
-                    type="name"
-                    class="form-control"
-                    required
-                    placeholder="Nombre"
-                />
+            <div class="col-12 container">
+                <div class="row-8">
+                <textarea class="form-control" id="name" rows="3"></textarea>
                 <br>
-                <input
-                    name="apellido"
-                    type="name"
-                    class="form-control"
-                    required
-                    placeholder="Apellido"
-                />
-                <br>
-                <input
-                    name="fecha"
-                    type="number"
-                    class="form-control"
-                    min="1900"
-                    max="2022"
-                    required
-                    placeholder="Año en que naciste"
-                />
-                <br>
-                <div class="col-md-6 offset-md-4" style="color: white">
-                <button class="btn btn-info btn-outline-dark col-7" type="submit">Enviar Formulario</button>
+                </div>
+                <div class="row-4">
+                <div class="col-md-6 offset-md-4">
+                <button class="btn btn-info btn-outline-dark col-7" type="submit">Guardar Texto</button>
+                <button class="btn btn-info btn-outline-dark col-7" type="submit">Cargar Texto</button>
+                <button class="btn btn-info btn-outline-dark col-7" type="submit">Borrar Texto</button>
+                </div>
                 </div>
             </div>
         </form>
